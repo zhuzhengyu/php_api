@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="../js/jquery-3.2.1.js"></script>
+<style>
+#main{width:960px;height:auto;}
+#left{width:250px;height:600px;}
+#right{width:700px;height:600px;margin-left:10px;}
+#left,#right{float:left;}
+</style>
+</head>
+<body>
+	<div id="main">
+		<div id="left"></div>
+		<div id="right"></div>
+	</div>
+</body>
+</html>
+
+<script>
+var url = 'http://magic/magic_api/wap/group_list.php';
+$.get(url, {}, function(response) {
+	$('#left').html(response);
+});
+</script>
